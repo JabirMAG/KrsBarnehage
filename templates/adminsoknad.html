@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Admin-side - Søknader</h2>
+<table border="1">
+    <tr>
+        <th>Søknadsfelt</th>
+        <th>Innhold</th>
+    </tr>
+    {% for soknad in data %}
+    <tr>
+        <td colspan="2"><strong>Ny Søknad</strong></td>
+    </tr>
+    {% for key, value in soknad.items() %}
+    <tr>
+        <td>{{ key }}</td>
+        <td>{{ value }}</td>
+    </tr>
+    {% endfor %}
+    {% endfor %}
+</table>
+{% endblock %}

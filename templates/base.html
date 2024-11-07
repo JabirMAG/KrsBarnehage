@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %} Krs Kommune</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+      <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.22.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.7.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
+</head>
+
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="{{ url_for('index') }}">
+                    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Kristiansand Kommune Logo">
+                </a>
+            </div>
+            <div class="menu">
+                <span>MENY:</span>
+                <a href="{{ url_for('index') }}">Hjem</a>
+                <a href="{{ url_for('behandle') }}">Søk</a>
+                <a href="{{ url_for('barnehager') }}">Barnehager</a>
+                <a href="{{ url_for('svar') }}">Svar</a>
+                <a href="{{ url_for('statistikk') }}">Statistikk</a>
+            </div>
+            <div class="admin">
+                <span>ADMIN:</span>
+                <a href="{{ url_for('adminsoknad') }}">Søknader</a>
+                <a href="{{ url_for('commit') }}">Commit</a>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="breadcrumbs">
+        <!-- Eventuelle breadcrumbs kan legges til her -->
+    </div>
+    
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
+    
+</body>
+</html>

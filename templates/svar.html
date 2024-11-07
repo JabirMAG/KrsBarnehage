@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Svar på Søknad</h2>
+
+{% if data['valgt_barnehage'] != "Ingen ledige plasser tilgjengelig" %}
+    <p>Gratulerer! Du har fått plass i: <strong>{{ data['valgt_barnehage'] }}</strong></p>
+{% else %}
+    <p>Beklager, det er ingen ledige plasser for øyeblikket.</p>
+{% endif %}
+
+<h3>Detaljer om Søknaden</h3>
+
+<div style="overflow-x:auto;">
+    <table class="details-table">
+        <thead>
+            <tr>
+                <th>Felt</th>
+                <th>Verdi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Navn - Forelder 1:</strong></td>
+                <td>{{ data['navn_forelder_1'] | escape }}</td>
+            </tr>
+            <tr>
+                <td><strong>Navn - Forelder 2:</strong></td>
+                <td>{{ data['navn_forelder_2'] | escape }}</td>
+            </tr>
+            <tr>
+                <td><strong>Adresse - Forelder 1:</strong></td>
+                <td>{{ data['adresse_forelder_1'] | escape }}</td>
+            </tr>
+            <tr>
+                <td><strong>Adresse - Forelder 2:</strong></td>
+                <td>{{ data['adresse_forelder_2'] | escape }}</td>
+            </tr>
+            <tr>
+                <td><strong>Telefonnummer - Forelder 1:</strong></td>
+                <td>{{ data['tlf_nr_forelder_1'] | escape }}</td>
+            </tr>
+            <tr>
+                <td><strong>Telefonnummer - Forelder 2:</strong></td>
+                <td>{{ data['tlf_nr_forelder_2'] | escape }}</td>
+            </tr>
+            <tr>
+                <td><strong>Personnummer - Forelder 1:</strong></td>
+                <td>{{ data['personnummer_forelder_1'] | escape }}</td>
+            </tr>
+            <tr>
+                <td><strong>Personnummer - Forelder 2:</strong></td>
+                <td>{{ data['personnummer_forelder_2'] | escape }}</td>
+            </tr>
+            <tr>
+                <td><strong>Personnummer - Barn 1:</strong></td>
+                <td>{{ data['personnummer_barnet_1'] | escape }}</td>
+            </tr>
+            <tr>
+                <td><strong>Personnummer - Barn 2:</strong></td>
+                <td>{{ data['personnummer_barnet_2'] | escape }}</td>
+            </tr>
+            <tr>
+                <td><strong>Fortrinnsrett - Barnevern:</strong></td>
+                <td>{{ data['fortrinssrett_barnevern'] | escape }}</td>
+            </tr>
+            <tr>
+                <td><strong>Fortrinnsrett - Sykdom i Familien:</strong></td>
+                <td>{{ data['fortrinssrett_sykdom_i_familien'] | escape }}</td>
+            </tr>
+            <tr>
+                <td><strong>Fortrinnsrett - Sykdom på Barnet:</strong></td>
+                <td>{{ data['fortrinssrett_sykdom_pa_barnet'] | escape }}</td>
+            </tr>
+            <tr>
+                <td><strong>Fortrinnsrett - Annet:</strong></td>
+                <td>{{ data['fortrinssrett_annet'] | escape }}</td>
+            </tr>
+            <tr>
+                <td><strong>Liste over Barnehager (Prioritert):</strong></td>
+                <td>{{ data['liste_over_barnehager_prioritert'] | escape }}</td>
+            </tr>
+            <tr>
+                <td><strong>Tidspunkt for Oppstart:</strong></td>
+                <td>{{ data['tidspunkt_for_oppstart'] | escape }}</td>
+            </tr>
+            <tr>
+                <td><strong>Har Søsken som Går i Barnehagen:</strong></td>
+                <td>{{ data['har_soesken_som_gar_i_barnehagen'] | escape }}</td>
+            </tr>
+            <tr>
+                <td><strong>Brutto Inntekt Husholdning:</strong></td>
+                <td>{{ data['brutto_inntekt_husholdning'] | escape }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

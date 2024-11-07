@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Statistikk for Kommuner{% endblock %}
+
+{% block content %}
+    <form method="post">
+        <label for="kommune">Velg en kommune:</label>
+        <input type="text" id="kommune" name="kommune" value="{{ kommune }}" required>
+        <button type="submit">Vis statistikk</button>
+    </form>
+
+    {% if chart_json %}
+    <h2>Prosentandel barn i barnehage for {{ kommune }}</h2>
+    <div id="chart"></div>
+    <script type="text/javascript">
+        const chartSpec = {{ chart_json | safe }};
+        vegaEmbed('#chart', chartSpec).catch(console.error);
+    </script>
+    {% elif kommune %}
+    <p>Kommunen "{{ kommune }}" finnes ikke i datasettet.</p>
+    {% endif %}
+{% endblock %}

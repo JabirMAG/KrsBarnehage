@@ -1,0 +1,381 @@
+/* Generelle stiler for body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo */
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+/* Meny og Admin */
+.menu, .admin {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu span, .admin span {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #555;
+}
+
+.navbar a {
+    color: #333;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+/* Navigasjonslenker (breadcrumbs) */
+.breadcrumbs {
+    padding: 10px 40px;
+    font-size: 0.9rem;
+    color: #666;
+    background-color: #eaeaea;
+}
+
+.breadcrumbs a {
+    color: #333;
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+/* Hovedinnhold */
+.content {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Uthevet seksjon */
+.highlighted-section {
+    background-color: #fff7e6;
+    padding: 20px;
+    border-left: 5px solid #D84315;
+    margin-bottom: 20px;
+}
+
+.highlighted-section h2 {
+    color: #D84315;
+    font-size: 1.8rem;
+    margin: 0 0 10px;
+}
+
+.highlighted-section p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Paragrafer og lenker */
+.content p {
+    margin-bottom: 1rem;
+}
+
+.content a {
+    color: #D84315;
+    text-decoration: none;
+}
+
+.content a:hover {
+    text-decoration: underline;
+}
+
+/* Knapper */
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #D84315;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #BF360C;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Responsiv design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu, .admin {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .breadcrumbs {
+        padding: 10px 20px;
+    }
+}
+/* Stil for tabellen */
+table.details-table {
+    width: 100%;
+    border-collapse: collapse;  /* Forhindrer overlapping av kantene */
+    margin-top: 20px;
+    background-color: #fff;
+    table-layout: auto;  /* Lar kolonnene tilpasse seg innholdet */
+}
+
+/* Topptekst i tabellen */
+table.details-table th, table.details-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+    font-size: 1rem; /* Juster skriftstørrelse */
+}
+
+table.details-table th {
+    background-color: #f4f4f4;  /* Lys grå bakgrunn for header */
+    color: #333;
+    font-weight: bold;
+}
+
+table.details-table tr:nth-child(even) {
+    background-color: #f9f9f9;  /* Lys bakgrunn for even rader */
+}
+
+table.details-table tr:hover {
+    background-color: #eaeaea;  /* Hover effekt for rader */
+}
+
+/* For å støtte horisontal rulling på små skjermer */
+div {
+    overflow-x: auto;
+}
+
+/* For å støtte lange ord og holde cellene i passende størrelse */
+table.details-table td {
+    word-wrap: break-word; /* Bryt lange ord */
+    max-width: 250px;  /* Maks bredde på cellene */
+}
+
+/* Justering og fontstørrelse for å forbedre lesbarheten */
+table.details-table th {
+    padding: 12px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+table.details-table td {
+    padding: 12px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Skjuler border når den er på mobil for bedre visning */
+@media (max-width: 768px) {
+    table.details-table th, table.details-table td {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Skjema generelle stiler */
+h3 {
+    color: #D84315;
+}
+
+/* For å støtte horisontal rulling når innholdet blir for langt */
+div {
+    overflow-x: auto;
+}
+
+/* Skjema generelle stiler */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Etiketter */
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+/* Input felter */
+input[type="text"], 
+input[type="tel"], 
+input[type="number"], 
+input[type="date"], 
+input[type="checkbox"], 
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* For tekst-input-felt */
+input[type="text"], 
+input[type="tel"], 
+input[type="number"], 
+input[type="date"] {
+    width: calc(100% - 20px);
+}
+
+/* For checkbox-input */
+input[type="checkbox"] {
+    width: auto;
+}
+
+/* Fokus-stil på input-felt */
+input[type="text"]:focus, 
+input[type="tel"]:focus, 
+input[type="number"]:focus, 
+input[type="date"]:focus {
+    border-color: #D84315;
+    outline: none;
+    box-shadow: 0 0 5px rgba(216, 67, 21, 0.3);
+}
+
+/* For submit-knapp */
+input[type="submit"] {
+    background-color: #D84315;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover-effekt på submit-knapp */
+input[type="submit"]:hover {
+    background-color: #BF360C;
+}
+
+/* Fieldset for fortrinnsrett */
+fieldset {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+}
+
+/* Legend for fieldset */
+legend {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #D84315;
+}
+
+/* For bedring av responsivitet på skjemaet */
+@media (max-width: 768px) {
+    form {
+        padding: 15px;
+        width: 100%;
+    }
+
+    input[type="text"], 
+    input[type="tel"], 
+    input[type="number"], 
+    input[type="date"] {
+        width: 100%;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+/* Stil for tabellen i Svar.html */
+table.details-table {
+    width: 100%;
+    border-collapse: collapse;  
+    margin-top: 20px;
+    background-color: #fff;
+    table-layout: auto;
+}
+
+table.details-table th, table.details-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+table.details-table th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+}
+
+table.details-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table.details-table tr:hover {
+    background-color: #eaeaea;
+}
+
+table.details-table td {
+    word-wrap: break-word;
+    max-width: 250px;
+}
+
+/* Justering for å gjøre tabellen mer responsiv */
+@media (max-width: 768px) {
+    table.details-table th, table.details-table td {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}
