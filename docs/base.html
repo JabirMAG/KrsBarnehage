@@ -1,48 +1,26 @@
-<!DOCTYPE html>
-<html lang="no">
-<head>
-    <meta charset="UTF-8">
-    <title>{% block title %} {% endblock %} Krs Kommune</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-      <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-    <script src="https://cdn.jsdelivr.net/npm/vega@5.22.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.7.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
-</head>
+{% extends 'index.html' %}
 
-</head>
-<body>
-    
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="{{ url_for('index') }}">
-                    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Kristiansand Kommune Logo">
-                </a>
-            </div>
-            <div class="menu">
-                <span>MENY:</span>
-                <a href="{{ url_for('index') }}">Hjem</a>
-                <a href="{{ url_for('behandle') }}">Søk</a>
-                <a href="{{ url_for('barnehager') }}">Barnehager</a>
-                <a href="{{ url_for('svar') }}">Svar</a>
-                <a href="{{ url_for('statistikk') }}">Statistikk</a>
-            </div>
-            <div class="admin">
-                <span>ADMIN:</span>
-                <a href="{{ url_for('adminsoknad') }}">Søknader</a>
-                <a href="{{ url_for('commit') }}">Commit</a>
-            </div>
-        </nav>
-    </header>
-    
-    <div class="breadcrumbs">
-        <!-- Eventuelle breadcrumbs kan legges til her -->
-    </div>
-    
-    <div class="content">
-        {% block content %} {% endblock %}
-    </div>
-    
-</body>
-</html>
+{% block content %}
+
+
+<h1>Kristiansand Kommune</h1>
+<p>Velkommen til søknadssiden for barnehageplass i Kristiansand Kommune. Her finner du informasjon om opptak, søknadsfrister og hvordan du søker.</p>
+
+<h2>Søk barnehageplass</h2>
+<p>Søknadsfristen for hovedopptaket er 1. mars hvert år, men du kan også søke gjennom hele året. Søknader etter 1. mars vurderes fortløpende etter hovedopptaket.</p>
+
+<h2>Barnehagetilbud i Kristiansand</h2>
+<p>Kristiansand har et variert utvalg av barnehager, både små og store, med ulike faglige tilbud og god geografisk spredning.</p>
+
+<h2>Foresattportalen</h2>
+<p>I Foresattportalen kan du søke barnehageplass, redusert foreldrebetaling, eller si opp plassen. For oppsigelse før avtalt startdato må en skriftlig oppsigelse sendes direkte til barnehagen.</p>
+
+<h2>Tilvenning i barnehage</h2>
+<p>Kristiansandsbarnehagen har foreldreaktiv tilvenning for en trygg start. Foreldre forventes å være sammen med barnet den første uken for å bidra til en god oppstart.</p>
+
+<h2>Klagerett</h2>
+<p>Har du ikke fått ditt første- eller andrevalg av barnehage, har du rett til å kreve begrunnelse og klage på avgjørelsen.</p>
+
+<p>For fullstendig informasjon, besøk <a href="https://www.kristiansand.kommune.no/navigasjon/barnehage-og-skole/barnehage/sok-barnehageplass/">Søk barnehageplass - Kristiansand Kommune</a>.</p>
+
+{% endblock %}
